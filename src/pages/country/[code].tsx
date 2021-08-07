@@ -24,8 +24,9 @@ function CountryPage({ country, currencyRateAmount, SEKRateAmount }: CountryPage
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const countryCode = query.code as string;
+  console.log("NEXT_PUBLIC",process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_FIXER_KEY)
   const currencyRate = await fetch(
-    `${FixerURL}?access_key=${process.env.FIXER_KEY}`,
+    `${FixerURL}?access_key=${process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_FIXER_KEY}`,
   ).then(res => res.json());
   const country = await fetch(
     `${restCountryURL}/alpha/${countryCode}?fields=${fields.join(';')}`,
