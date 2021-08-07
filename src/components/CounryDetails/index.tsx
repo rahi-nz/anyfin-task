@@ -1,7 +1,7 @@
 import { Container, CurrencySection, Column, LocalCurrency } from './style';
 import type { Country } from 'types/countries';
 import { SEK_CURRENCY } from 'config';
-import { TextInput } from 'components';
+import TextInput from 'components/TextInput';
 import React, { useState } from 'react';
 
 type Props = {

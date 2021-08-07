@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next';
-import { CountryDetails, Layout } from 'components';
 import type { Country } from 'types/countries';
+import CountryDetails from 'components/CounryDetails';
+import Layout from 'components/Layout';
 
 import { fields, SEK_CURRENCY, restCountryURL, FixerURL } from 'config';
 

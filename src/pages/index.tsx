@@ -1,4 +1,5 @@
-import { Layout, AutocompleteSearch } from 'components';
+import Layout from 'components/Layout/index';
+import AutocompleteSearch from 'components/AutocompleteSearch';
 import Image from 'next/image';
 
 const Index = () => {

@@ -1,10 +1,11 @@
-import { Container, List } from './style';
+import { Container, List, Item } from './style';
 import React, { useCallback } from 'react';
 import { debounce } from 'lodash';
 import Link from 'next/link';
-import { TextInput, usePersistedState } from 'components';
-import { Country } from 'types/countries';
+import TextInput from 'components/TextInput';
+import usePersistedState from 'components/usePersistedState';
 import { fields } from 'config';
+import { Country } from 'types/countries';
 
 const AutocompleteSearch = () => {
   const [countries, setCountries] = usePersistedState<Country[]>('countries', []);
@@ -44,11 +45,11 @@ const AutocompleteSearch = () => {
       {countries.length > 0 && (
         <List>
           {countries.map(country => (
-            <li key={country.name}>
+            <Item key={country.name}>
               <Link href={`/country/${country.alpha3Code}`}>
                 <a>{country.name}</a>
               </Link>
-            </li>
+            </Item>
           ))}
         </List>
       )}

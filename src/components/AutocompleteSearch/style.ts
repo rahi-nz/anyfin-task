@@ -12,11 +12,15 @@ export const List = styled.ul`
   box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
   border-radius: 20px;
   padding: 10px 30px;
-  li {
-    text-align: left;
-    padding: 10px 0;
-    a {
-      color: #fff;
-    }
+`;
+
+export const Item = styled.li.attrs(() => ({
+  'data-test-id': 'suggested',
+}))`
+  text-align: left;
+  padding: 10px 0;
+  a {
+    color: #fff;
+    display: block;
   }
 `;
