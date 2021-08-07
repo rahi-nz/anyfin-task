@@ -31,6 +31,18 @@ const GlobalStyle = createGlobalStyle<IThemeWrapper>`
      margin: 0;
   }
   
+  a {
+    text-decoration: none;
+    &:hover {
+    opacity: 0.7;
+    }
+  }
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+  
   input {
      font-family: 'Roboto', sans-serif;
   }
@@ -43,6 +55,22 @@ const GlobalStyle = createGlobalStyle<IThemeWrapper>`
   input::-webkit-inner-spin-button {
      -webkit-appearance: none;
      margin: 0;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: inherit;
+    -webkit-box-shadow: inherit;
+    transition: background-color 5000s ease-in-out 0s;
+    font-size: inherit;
   }
   
   input[type=number] {

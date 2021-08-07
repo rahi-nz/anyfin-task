@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Container, Content } from './style';
+import { Container } from './style';
 
 interface Props {
   children: React.ReactNode;
@@ -24,9 +24,7 @@ const Layout = ({ children }: Props) => {
           rel="stylesheet"
         />
       </Head>
-      <Container>
-        <Content>{children}</Content>
-      </Container>
+      <Container>{children}</Container>
     </>
   );
 };

@@ -1,11 +1,11 @@
-import Layout from 'components/Layout';
+import { Layout, AutocompleteSearch } from 'components';
 import Image from 'next/image';
 
 const Index = () => {
   return (
     <Layout>
-      <Image src="/earth.gif" alt="anyfin" width={300} height={250} />
-      <p>Anyfin task</p>
+      <Image src="/earth.gif" alt="anyfin" width={250} height={200} />
+      <AutocompleteSearch />
     </Layout>
   );
 };
