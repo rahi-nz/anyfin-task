@@ -21,7 +21,7 @@ api/node_modules
 
 # misc
 .DS_Store
-/.env*
+/.env
 
 # debug
 /npm-debug.log*

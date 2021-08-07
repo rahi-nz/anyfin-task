@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle<IThemeWrapper>`
     background:  #43C5F4;
     margin: 0 auto;
     height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     color: ${props => props.theme.niceBlack}; 
   }
   
@@ -44,11 +44,11 @@ const GlobalStyle = createGlobalStyle<IThemeWrapper>`
   }
   
   input {
-     font-family: 'Roboto', sans-serif;
+     font-family: 'Titillium Web', sans-serif;
   }
   
   button {
-     font-family: 'Roboto', sans-serif;
+     font-family: 'Titillium Web', sans-serif;
   }
   
   input::-webkit-outer-spin-button,

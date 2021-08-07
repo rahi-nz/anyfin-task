@@ -4,8 +4,7 @@ import { debounce } from 'lodash';
 import Link from 'next/link';
 import { TextInput, usePersistedState } from 'components';
 import { Country } from 'types/countries';
-
-const fields = ['name', 'capital', 'population', 'currencies', 'alpha3Code'];
+import { fields } from 'config';
 
 const AutocompleteSearch = () => {
   const [countries, setCountries] = usePersistedState<Country[]>('countries', []);
@@ -39,6 +38,7 @@ const AutocompleteSearch = () => {
         name="country"
         label="Search country by name"
         placeholder="Search country by name"
+        search
         onChange={onInputChange}
       />
       {countries.length > 0 && (
